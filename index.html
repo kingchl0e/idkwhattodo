@@ -1,4 +1,15 @@
- 
+ <h1>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</h1>
+
+<body>
+  <input type="file" id="upload">
+  <br>
+  
+  <p id="outputBx"></p>
+  <script src="index.js"></script>
+</body>
 <style>
 
 	@keyframes body-pulse {
@@ -39,6 +50,7 @@
   display: flex;
   font-weight: 600px;
   font-size: 50px;
+  font-family: monospace;
   padding: 15px 18px;
   line-height: 50px;
   text-align: center;
@@ -59,7 +71,7 @@
   #doThis {
     color: black;
     font-size: 48px;
-    font-family: sans-serif;
+    font-family: monospace;
     margin: 20px;
     text-align: center;
     text-transform: uppercase;
@@ -72,44 +84,25 @@
 <p id="doThis"></p>
 
 <script>
-  const options = ['adelaide',
-              'adequate',
-              'adidas',
-              'adipex',
-              'adjacent',
-              'adjust',
-              'adjustable',
-              'adjusted',
-              'adjustment',
-              'adjustments',
-              'admin',
-              'administered',
-              'administration',
-              'administrative',
-              'administrator',
-              'administrators',
-              'admission',
-              'admissions',
-          		'affair',
-              'affairs',
-              'affect',
-              'affected',
-              'affecting',
-              'affects',
-              'affiliate',
-              'affiliated',
-              'affiliates',
-              'affiliation',
-              'afford',
-              'affordable',
-              'afghanistan',
-              'afraid',
-              'africa',
-              'african',
-              'after',
-              'afternoon',
-              'afterwards'
-              ];
+  console.log('this is index.js');
+  
+  let upload = document.getElementById('upload');
+  
+  let outputBx = document.getElementById('outputBx');
+  
+  upload.addEventListener('change', ()=>{
+    
+    let fr = new FileReader();
+    
+    fr.readAsText(upload.file[0]);
+    
+    fr.onload = function(){
+      outputBx.innerHTML = fr.result;
+    };
+  });
+  
+  const options = readFileSync(wordlist1.txt,'utf-8').split('\n')
+  
   
   function help(){
     const randOptionNum = Math.floor(Math.random() * options.length);
