@@ -1,30 +1,17 @@
- <h1>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</h1>
-
-<body>
-  <input type="file" id="upload">
-  <br>
-  
-  <p id="outputBx"></p>
-  <script src="index.js"></script>
-</body>
+<script src = "wordlist1.txt"></script>
 <style>
 
 	@keyframes body-pulse {
-		15% {
-			background-color: hsl(295, 71%, 79%);
-    }
+		
 		50% {
-			background-color: hsl(279, 79%, 78%);
+			background-color: hsl(96, 2%, 59%);
     }
     
     50% {
-    	background-color: hsl(288, 99%, 73%);
+    	background-color: black;
     }
     50% {
-      background-color: hsl(282, 70%, 70%); 
+      background-color: black; 
     }
   }
   
@@ -39,31 +26,36 @@
 
   
   
+
 .button1 {
-  background-color: #fbeee0;
-  border: 4px solid #422800;
-  border-radius: 30px;
-  box-shadow: #422800 4px 4px 0 0;
-  text-shadow: 2px 2px 2px black;
-  color: #422800;
-  cursor: pointer;
   display: flex;
-  font-weight: 600px;
-  font-size: 50px;
+  margin: 120px auto;
+  background-image: linear-gradient(92.88deg, #427ab5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 1px;
+  border-style: inset;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 2;
   font-family: monospace;
-  padding: 15px 18px;
-  line-height: 50px;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 40px 1px;
   text-align: center;
-  text-decoration: none;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
   user-select: none;
-  margin: 250px auto;
   touch-action: manipulation;
 }
 
 .button1:hover {
-  background-color: yellow;
+  box-shadow: rgba(80, 63, 205, 0.5) 20px 5px 30px;
+  transition-duration: .1s;
+  background-color: pink;
 }
 
+
+  
 .button1:active {
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
@@ -75,7 +67,7 @@
     margin: 20px;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 2px 2px 5px black;
+    text-shadow: 2px 2px 5px white;
   
   }
 </style>
@@ -84,25 +76,26 @@
 <p id="doThis"></p>
 
 <script>
-  console.log('this is index.js');
   
-  let upload = document.getElementById('upload');
+ 
   
-  let outputBx = document.getElementById('outputBx');
-  
-  upload.addEventListener('change', ()=>{
-    
-    let fr = new FileReader();
-    
-    fr.readAsText(upload.file[0]);
-    
-    fr.onload = function(){
-      outputBx.innerHTML = fr.result;
-    };
-  });
-  
-  const options = readFileSync(wordlist1.txt,'utf-8').split('\n')
-  
+  const options = ['chat',
+                  'cheap',
+                  'cheaper',
+                  'cheapest',
+                  'cheat',
+                  'cheats',
+                  'check',
+                  'checked',
+                  'checking',
+                  'checklist',
+                  'checkout',
+                  'checks',
+                  'cheers',
+                  'cheese',
+                  'chef',
+                  'chem'];
+                  
   
   function help(){
     const randOptionNum = Math.floor(Math.random() * options.length);
