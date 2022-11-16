@@ -1,124 +1,15 @@
-<script src = "wordlist1.txt"></script>
-<style>
-
-	@keyframes body-pulse {
-		
-		50% {
-			background-color: hsl(96, 2%, 59%);
-    }
-    
-    50% {
-    	background-color: black;
-    }
-    50% {
-      background-color: black; 
-    }
-  }
-  
-  body {
-    margin: 6;
-    height: 30vh;
-    display: flex 90px;
-    justify-content: center;
-    align-items: center;
-    animation: body-pulse 5s infinite;
-  }
-
-  
-  
-
-.button1 {
-  display: flex;
-  margin: 120px auto;
-  background-image: linear-gradient(92.88deg, #427ab5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
-  border-radius: 1px;
-  border-style: inset;
-  box-sizing: border-box;
-  color: rgb(244, 236, 236);
-  cursor: pointer;
-  flex-shrink: 2;
-  font-family: monospace;
-  font-size: 25px;
-  font-weight: 500;
-  padding: 40px 1px;
-  text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-  transition: all .5s;
-  user-select: none;
-  touch-action: manipulation;
-}
-
-.button1:hover {
-  box-shadow: rgba(80, 63, 205, 0.5) 20px 5px 30px;
-  transition-duration: .1s;
-  background-color: rgb(211, 158, 24);
-}
-
-
-  
-.button1:active {
-  box-shadow: #422800 2px 2px 0 0;
-  transform: translate(2px, 2px);
-} 
-  #doThis {
-    color: black;
-    font-size: 48px;
-    font-family: monospace;
-    margin: 20px;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px white;
-  
-  }
-</style>
-
-<button onclick="help()" class="button1" role="button">I Don't Know What To Do</button>
-<p id="doThis"></p>
-
-<script>
-  
- 
-  
-  const options = ['chat',
-                  'cheap',
-                  'cheaper',
-                  'cheapest',
-                  'cheat',
-                  'cheats',
-                  'check',
-                  'checked',
-                  'checking',
-                  'checklist',
-                  'checkout',
-                  'checks',
-                  'cheers',
-                  'cheese',
-                  'chef',
-                  'chem'];
-                  
-  
-  function help(){
-    const randOptionNum = Math.floor(Math.random() * options.length);
-    
-    document.getElementById('doThis').innerHTML = '';
-    document.getElementById('doThis').innerHTML = options[randOptionNum];
-  }
-  
-	function writeWord (word) {
-    document.body.style.marginTop = '50px'
-    document.body.style.textAlign = 'center'
-    document.body.style.fontSize = '10px'
-    document.body.textContent = word
-  }
-  
- 
-
-</script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-
- 
-
-	
-
+    <button onclick="help()" class="button1" role="button">I Don't Know What To Do</button>
+    <p id="doThis"></p>
+    <script>src = "js/main.js"</script>
 </body>
+</html>
