@@ -1,0 +1,28 @@
+body {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7f/PIA23165-Comet-C2018Y1-Animation-20190225.gif');
+  	color: white;
+    text-align: center;
+    margin: center;
+    font-size: 10px;
+    display: flex;
+  }
+  h1 {
+   font-family: serif;
+   font-size: 40px;
+   margin: 350px;
+    display: center;
+    
+  }
+  a {
+    text-decoration: none;
+    color: hsl(360, 99%, 66%);
+    
+  }
+  a:hover {
+  text-shadow: rgba(80, 63, 205, 0.5) 20px 5px 30px;
+  transition-duration: .2s;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 3px;
+  
+  }
